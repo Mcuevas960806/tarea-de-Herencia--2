@@ -1,0 +1,131 @@
+class Empleado:
+    def __init__(self, nombre, salario):
+        self.nombre = nombre
+        self.salario = salario
+
+    def obtener_info(self):
+        return f"Nombre: {self.nombre}, Salario: {self.salario}"
+
+
+class Gerente(Empleado):
+    def __init__(self, nombre, salario, departamento):
+        super().__init__(nombre, salario)
+        self.departamento = departamento
+
+    def obtener_info(self):
+        return f"Nombre: {self.nombre}, Salario: {self.salario}, Departamento: {self.departamento}"
+
+
+empleado1 = Empleado("Juan", 30000)
+gerente1 = Gerente("Ana", 50000, "Ventas")
+
+print(empleado1.obtener_info())
+print(gerente1.obtener_info())
+
+
+
+class Figura:
+    def __init__(self, color):
+        self.color = color
+
+    def area(self):
+        pass
+
+
+class Rectangulo(Figura):
+    def __init__(self, color, ancho, altura):
+        super().__init__(color)
+        self.ancho = ancho
+        self.altura = altura
+
+    def area(self):
+        return self.ancho * self.altura
+
+
+class Circulo(Figura):
+    def __init__(self, color, radio):
+        super().__init__(color)
+        self.radio = radio
+
+    def area(self):
+        return 3.14 * self.radio ** 2
+
+
+rectangulo1 = Rectangulo("Rojo", 5, 10)
+circulo1 = Circulo("Azul", 7)
+
+print(rectangulo1.area())
+print(circulo1.area())
+
+class Animal:
+    def __init__(self, nombre):
+        self.nombre = nombre
+
+    def hacer_sonido(self):
+        pass
+
+
+class Perro(Animal):
+    def hacer_sonido(self):
+        return "¡Guau!"
+
+
+class Gato(Animal):
+    def hacer_sonido(self):
+        return "¡Miau!"
+
+
+perro1 = Perro("Max")
+gato1 = Gato("Luna")
+
+print(perro1.hacer_sonido())
+print(gato1.hacer_sonido())
+
+class Vehiculo:
+    def __init__(self, marca, modelo):
+        self.marca = marca
+        self.modelo = modelo
+
+    def obtener_info(self):
+        return f"Marca: {self.marca}, Modelo: {self.modelo}"
+
+
+class Coche(Vehiculo):
+    def __init__(self, marca, modelo, color):
+        super().__init__(marca, modelo)
+        self.color = color
+
+
+class Moto(Vehiculo):
+    def __init__(self, marca, modelo, cilindrada):
+        super().__init__(marca, modelo)
+        self.cilindrada = cilindrada
+
+
+coche1 = Coche("Ford", "Focus", "Rojo")
+moto1 = Moto("Honda", "CBR", 1000)
+
+print(coche1.obtener_info())
+print(moto1.obtener_info())
+
+class MetodoPago:
+    def procesar_pago(self, monto):
+        pass
+
+
+class TarjetaCredito(MetodoPago):
+    def procesar_pago(self, monto):
+        return f"Procesando pago de ${monto} con tarjeta de crédito..."
+
+
+class PayPal(MetodoPago):
+    def procesar_pago(self, monto):
+        return f"Procesando pago de ${monto} con PayPal..."
+
+
+tarjeta = TarjetaCredito()
+paypal = PayPal()
+
+print(tarjeta.procesar_pago(100))
+print(paypal.procesar_pago(50))
+

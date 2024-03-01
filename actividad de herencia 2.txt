@@ -1,0 +1,66 @@
+Universidad Iberoamericana
+
+
+Integrantes:
+Miguel A. Cuevas (23-0688)
+
+
+Asignatura
+
+programación I
+
+
+Sección:
+
+
+01
+
+Título Actividad de Herencia 2
+
+
+Docente
+
+Joerlyn M. Morfe
+
+
+Introducción:
+Investigación sobre los Tipos de Herencia en la Programación Orientada a Objetos
+La programación orientada a objetos (POO) es un paradigma de programación ampliamente utilizado en el desarrollo de software debido a su capacidad para modelar sistemas complejos de manera clara y eficiente. Una de las características fundamentales de la POO es la herencia, un concepto que permite a las clases compartir atributos y métodos de otras clases. La herencia es esencial para la reutilización de código y la creación de jerarquías de clases bien estructuradas.
+En este trabajo de investigación, exploraremos los diferentes tipos de herencia en la programación orientada a objetos. Desde la herencia simple hasta la herencia híbrida, cada tipo presenta sus propias características y aplicaciones específicas. Comprender estos conceptos es crucial para el diseño y la implementación efectiva de sistemas orientados a objetos.
+A lo largo de esta investigación, analizaremos cada tipo de herencia, discutiendo sus ventajas, desventajas y ejemplos de aplicación. Al final, tendremos una visión integral de cómo se pueden aprovechar estos conceptos en el desarrollo de software.
+A partir de esta introducción, podrías continuar desarrollando el cuerpo de la investigación, cubriendo cada tipo de herencia de manera detallada, proporcionando ejemplos y análisis en profundidad. Al final, podrías concluir resumiendo los puntos clave y destacando la importancia de comprender estos conceptos para los programadores orientados a objetos.
+
+1. Herencia Simple
+La herencia simple es el tipo más básico de herencia en la programación orientada a objetos, donde una clase puede heredar atributos y métodos de una única clase base. Este enfoque fomenta la reutilización de código y la creación de relaciones jerárquicas simples entre las clases.
+Ejemplo:
+pythonCopy code
+class Animal: def speak(self): pass class Dog(Animal): def speak(self): return "Woof!" # Uso dog = Dog() print(dog.speak()) # Salida: Woof! 
+2. Herencia Múltiple
+La herencia múltiple permite que una clase herede atributos y métodos de más de una clase base. Aunque poderosa, puede llevar a problemas de ambigüedad y complejidad si no se maneja adecuadamente.
+Ejemplo:
+pythonCopy code
+class A: def method_a(self): pass class B: def method_b(self): pass class C(A, B): pass # Uso c = C() c.method_a() # Método heredado de A c.method_b() # Método heredado de B 
+3. Herencia Multinivel
+En la herencia multinivel, una clase puede heredar de otra clase que, a su vez, hereda de otra clase. Esto crea una jerarquía de clases donde las clases derivadas pueden acceder a atributos y métodos de múltiples niveles hacia arriba en la jerarquía.
+Ejemplo:
+pythonCopy code
+class A: def method_a(self): pass class B(A): pass class C(B): pass # Uso c = C() c.method_a() # Método heredado de A 
+4. Herencia Híbrida
+La herencia híbrida es una combinación de herencia múltiple y herencia multinivel. Esto permite que una clase herede de múltiples clases base y también forme una jerarquía multinivel.
+Ejemplo:
+pythonCopy code
+class A: pass class B(A): pass class C(A): pass class D(B, C): pass # Uso d = D() 
+5. Herencia de Implementación vs. Herencia de Interfaz
+La herencia de implementación implica heredar tanto la interfaz como la implementación de una clase base. Por otro lado, la herencia de interfaz implica heredar solo la interfaz, lo que significa que una clase derivada debe proporcionar su propia implementación para los métodos heredados.
+Ejemplo de Herencia de Implementación:
+pythonCopy code
+class Shape: def area(self): pass class Rectangle(Shape): def area(self): return self.width * self.height 
+Ejemplo de Herencia de Interfaz:
+pythonCopy code
+from abc import ABC, abstractmethod class Shape(ABC): @abstractmethod def area(self): pass class Rectangle(Shape): def area(self): return self.width * self.height 
+Conclusiones
+Los diferentes tipos de herencia en la programación orientada a objetos ofrecen flexibilidad y poder en el diseño y la implementación de sistemas de software. Sin embargo, es importante comprender las características y las aplicaciones de cada tipo para utilizarlos de manera efectiva. La herencia simple, múltiple, multinivel, híbrida y la distinción entre herencia de implementación y herencia de interfaz son conceptos fundamentales que ayudan a los programadores a construir sistemas robustos y mantenibles.
+Este trabajo de investigación proporciona una visión general de los tipos de herencia en la programación orientada a objetos, ofreciendo ejemplos claros y explicaciones detalladas para cada tipo.
+Principio del formulario
+Principio del formulario
+
